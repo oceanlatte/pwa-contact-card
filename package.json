@@ -10,7 +10,7 @@
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "client": "cd client && npm start",
-    "install": "concurrently \"cd client && npm install\" \"cd server && npm instal\""
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\""
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "homepage": "https://github.com/oceanlatte/pwa-contact-card#readme",
   "dependencies": {
     "concurrently": "^7.4.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0"
   }
 }
