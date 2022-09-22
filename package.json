@@ -25,5 +25,8 @@
   "homepage": "https://github.com/oceanlatte/pwa-contact-card#readme",
   "dependencies": {
     "concurrently": "^7.4.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0"
   }
 }
