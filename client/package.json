@@ -4,7 +4,9 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode development",
+    "dev": "webpack-dev-server",
+    "start": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
