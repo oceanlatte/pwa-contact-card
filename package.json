@@ -12,6 +12,10 @@
     "client": "cd client && npm start",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\""
   },
+  "engines": {
+    "node": "16.x"
+  },
+  "heroku-prebuild": "npm install --dev",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oceanlatte/pwa-contact-card.git"
