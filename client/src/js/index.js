@@ -47,7 +47,7 @@ form.addEventListener('submit', (event) => {
     postDb(name, email, phone, profile);
   } else {
 
-    // Obtains values passed into the form element
+  // Obtains values passed into the form element
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
   let email = document.getElementById("email").value;
@@ -75,4 +75,23 @@ window.deleteCard = (e) => {
   deleteDb(id);
 
   fetchCards(); // reloads the DOM
+}
+
+window.editCard = (e) => {
+  // gets id from the button el attached to the contact card
+  // sets a global variable that will be used in the form element
+  profileId = parseInt(e.dataset.id);
+
+  // grabs info to pre-populate edit form
+  let editName = e.dataset.name;
+  let editPhone = e.dataset.phone;
+  let editEmail = e.dataset.email;
+
+  document.getElementById("name").value = editName;
+  document.getElementById("phone").value = editPhone;
+  document.getElementById("email").value = editEmail;
+
+  form.style.display = 'block';
+
+  submitBtnToUpdate = true;
 }
