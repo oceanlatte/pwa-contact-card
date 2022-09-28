@@ -95,3 +95,10 @@ window.editCard = (e) => {
 
   submitBtnToUpdate = true;
 }
+
+if ('serviceWorker' in navigator) {
+  // use the window load event to keep the page load perfomant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js');
+  });
+};
